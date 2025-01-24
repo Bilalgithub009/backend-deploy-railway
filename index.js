@@ -1,6 +1,7 @@
 
 import express from 'express';
-import morgon from 'morgan';
+import morgan from 'morgan';
+
 
 // const tasks = [
 //     {
@@ -41,12 +42,12 @@ import morgon from 'morgan';
 const app = express();
 const port = 4000;
 
-app.use(morgon('tiny'));
+app.use(morgan('tiny'));
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    // res.send('Hello World!');
-    res.status(200).send(tasks);
+    res.send('server is running');
+    // res.status(200).send(tasks);
     
 });
 
